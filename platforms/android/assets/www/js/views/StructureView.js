@@ -11,13 +11,11 @@ define(function(require) {
 
     id: "main",
 
-  /*  
-  navbar disabled
-  events: {
+    events: {
       "touchend #nav1": "myView",
-      "touchend #nav2": "map"
+      "touchend #nav2": "videos"
     },
-    */
+
 
     initialize: function(options) {
       // load the precompiled template
@@ -42,9 +40,7 @@ define(function(require) {
     goBack: function() {
       //window.history.back();
     },
-/* 
 
-//Navbar disabled
 
     setActiveTabBarElement: function(elementId) {
       // here we assume that at any time at least one tab bar element is active
@@ -52,15 +48,17 @@ define(function(require) {
       document.getElementById(elementId).classList.add("active");
     },
 
-    map: function(event) {
-      alert("click!")
+    videos: function(event) {
+      Backbone.history.navigate("videolist", {
+        trigger: true
+      });
     },
     myView: function(event) {
-      Backbone.history.navigate("myview", {
+      Backbone.history.navigate("feedlist", {
         trigger: true
       });
     }
-*/
+
   });
 
   return StructureView;

@@ -2,10 +2,10 @@
 <widget id="com.gabrycaos.rssreader" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>RSSReader</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Rss reader based on Apache Cordova, BackboneJs and RequireJs
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="gabrycaos@yahoo.it" href="facebook.com/gabrycaos">
+		gabrycaos	
     </author>
     <content src="index.html" />
     <access origin="*" />

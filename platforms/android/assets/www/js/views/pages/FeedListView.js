@@ -6,7 +6,7 @@ define(function(require) {
   var Item = require("views/pages/FeedListItemView");
   var Utils = require("utils");
 
-  var FeedView = Utils.Page.extend({
+  var FeedListView = Utils.Page.extend({
 
     constructorName: "FeedListView",
 
@@ -29,6 +29,6 @@ define(function(require) {
     },
   });
 
-  return FeedView;
+  return FeedListView;
 
 });

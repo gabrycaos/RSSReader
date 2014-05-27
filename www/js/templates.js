@@ -12,5 +12,7 @@ define({
     structure: "templates/structure.html",
     feedview: "templates/feedview.html",
     feedlistitem: "templates/feedlistitem.html",
-    feedlist: "templates/feedlist.html"
+    feedlist: "templates/feedlist.html",
+    videolistitem: "templates/videolistitem.html",
+    videolist: "templates/videolist.html"
 });

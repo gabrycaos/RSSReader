@@ -5,7 +5,7 @@ define(function(require) {
 	var Backbone = require("backbone");
 
 	var FeedModel = Backbone.Model.extend({
-		constructorName: "MyModel",
+		constructorName: "FeedModel",
 		title: undefined,
 		img: undefined,
 		desc: undefined,

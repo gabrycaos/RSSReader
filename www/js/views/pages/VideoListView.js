@@ -3,19 +3,19 @@ define(function(require) {
   var $ = require("jquery");
   var _ = require("underscore");
   var Backbone = require("backbone");
-  var Item = require("views/pages/FeedListItemView");
+  var Item = require("views/pages/VideoListItemView");
   var Utils = require("utils");
 
-  var FeedListView = Utils.Page.extend({
+  var VideoListView = Utils.Page.extend({
 
-    constructorName: "FeedListView",
+    constructorName: "VideoListView",
 
 
     tagName: "ul",
-    id: "feeds",
+    id: "videos",
 
     initialize: function() {
-      this.template = Utils.templates.feedlist
+      this.template = Utils.templates.videolist
     },
     render: function(eventName) {
       this.model.bind("reset", this.render, this);
@@ -29,6 +29,6 @@ define(function(require) {
     },
   });
 
-  return FeedListView;
+  return VideoListView;
 
 });
