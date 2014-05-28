@@ -14,6 +14,7 @@ define(function(require) {
                 url: link,
                 dataType: 'xml',
                 success: function(res, code) {
+                    console.log(res);
                     entries = [];
                     var xml = $(res);
                     var items = xml.find("item");

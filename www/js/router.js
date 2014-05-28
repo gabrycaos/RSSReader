@@ -12,6 +12,7 @@ define(function(require) {
   var FeedListView = require("views/pages/FeedListView");
   var FeedView = require("views/pages/FeedView");
   var VideoListView = require("views/pages/VideoListView");
+  var UrlConfig = require("urlConfig");
 
   var AppRouter = Backbone.Router.extend({
 
@@ -29,14 +30,12 @@ define(function(require) {
 
     initialize: function(options) {
       this.currentView = undefined;
-      this.urlFeeds = "http://www.rietimeeting.com/feed";
-      this.urlVideos = "http://gdata.youtube.com/feeds/base/users/calciofoggia/uploads?alt=rss&client=ytapi-youtube-rss-redirect&v=2&orderby=updated"
       // highlight the nav1 tab bar element as the current one
       this.aggregator = new Aggregator();
       this.feeds = new FeedCollection([]);
       this.videos = new VideoCollection([]);
-      this.aggregator.fetch(this.feeds, this.urlFeeds);
-      this.aggregator.youtube(this.videos, this.urlVideos);
+      this.aggregator.fetch(this.feeds, UrlConfig.news);
+      this.aggregator.youtube(this.videos, UrlConfig.youtube);
       console.log(this.videos);
     },
 

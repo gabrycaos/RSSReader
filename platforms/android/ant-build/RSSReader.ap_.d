@@ -14,7 +14,6 @@
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/_where-is-www.txt \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/cordova.js \
-/home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/README.md \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/cordova_plugins.js \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/fonts \
@@ -32,9 +31,13 @@
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/main.js \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/models/FeedModel.js \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/models/Aggregator.js \
+/home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/models/VideoModel.js \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/collections/FeedCollection.js \
+/home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/collections/VideoCollection.js \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/views/StructureView.js \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/views/pages \
+/home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/views/pages/VideoListView.js \
+/home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/views/pages/VideoListItemView.js \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/views/pages/FeedView.js \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/views/pages/FeedListItemView.js \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/js/views/pages/FeedListView.js \
@@ -58,6 +61,8 @@
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/res/icon/ios/icon-57-2x.png \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/templates/structure.html \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/templates/feedlist.html \
+/home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/templates/videolist.html \
+/home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/templates/videolistitem.html \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/templates/feedlistitem.html \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/templates/feedview.html \
 /home/gabrycaos/workspace/RSSReader/platforms/android/assets/www/img/hereIcon.png \
