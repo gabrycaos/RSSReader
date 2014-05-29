@@ -13,7 +13,8 @@ define(function(require) {
 
     events: {
       "touchend #nav1": "myView",
-      "touchend #nav2": "videos"
+      "touchend #nav2": "videos",
+      "touchend #nav3": "posts"
     },
 
 
@@ -53,6 +54,13 @@ define(function(require) {
         trigger: true
       });
     },
+
+    posts: function(event) {
+      Backbone.history.navigate("postlist", {
+        trigger: true
+      });
+    },
+
     myView: function(event) {
       Backbone.history.navigate("feedlist", {
         trigger: true

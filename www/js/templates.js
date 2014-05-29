@@ -14,5 +14,7 @@ define({
     feedlistitem: "templates/feedlistitem.html",
     feedlist: "templates/feedlist.html",
     videolistitem: "templates/videolistitem.html",
-    videolist: "templates/videolist.html"
+    videolist: "templates/videolist.html",
+    postlist: "templates/postlist.html",
+    postlistitem: "templates/postlistitem.html"
 });

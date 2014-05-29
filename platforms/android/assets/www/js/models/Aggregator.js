@@ -5,8 +5,7 @@ define(function(require) {
     var Backbone = require("backbone");
     var FeedModel = require("models/FeedModel");
     var VideoModel = require("models/VideoModel");
-    //var FeedCollection = require("collections/FeedCollection")
-
+    var FbPostModel = require("models/FbPostModel");
     var Aggregator = Backbone.Model.extend({
         constructorName: "Aggregator",
         fetch: function(feeds, link) {
@@ -14,7 +13,6 @@ define(function(require) {
                 url: link,
                 dataType: 'xml',
                 success: function(res, code) {
-                    console.log(res);
                     entries = [];
                     var xml = $(res);
                     var items = xml.find("item");
@@ -59,6 +57,29 @@ define(function(require) {
                 },
                 error: function(jqXHR, status, error) {
                     alert("ERROR ON FETCHING VIDEOS!")
+                }
+            });
+        },
+        facebook: function(posts, link) {
+            $.ajax({
+                url: link,
+                dataType: 'xml',
+                success: function(res, code) {
+                    entries = [];
+                    var xml = $(res);
+                    var items = xml.find("entry");
+                    $.each(items, function(i, v) {
+                        entry = new FbPostModel({
+                            desc: $(v).find("content").html(),
+                            date: $(v).find("published").text(),
+                            author: $(v).find("author").text()
+                        });
+                        entries.push(entry);
+                    });
+                    posts.reset(entries);
+                },
+                error: function(jqXHR, status, error) {
+                    alert("ERROR ON FETCHING NEWS!");
                 }
             });
         },

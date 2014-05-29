@@ -8,10 +8,12 @@ define(function(require) {
   var Aggregator = require("models/Aggregator");
   var FeedCollection = require("collections/FeedCollection");
   var VideoCollection = require("collections/VideoCollection");
+  var FbPostCollection = require("collections/FbPostCollection");
   var StructureView = require("views/StructureView");
   var FeedListView = require("views/pages/FeedListView");
   var FeedView = require("views/pages/FeedView");
   var VideoListView = require("views/pages/VideoListView");
+  var FbPostListView = require("views/pages/FbPostListView");
   var UrlConfig = require("urlConfig");
 
   var AppRouter = Backbone.Router.extend({
@@ -24,6 +26,7 @@ define(function(require) {
       "feedlist": "feedlist",
       "feeds/:id": "feedDetails",
       "videolist": "goVideos",
+      "postlist": "posts",
     },
 
     firstView: "feedlist",
@@ -34,14 +37,14 @@ define(function(require) {
       this.aggregator = new Aggregator();
       this.feeds = new FeedCollection([]);
       this.videos = new VideoCollection([]);
+      this.posts = new FbPostCollection([]);
       this.aggregator.fetch(this.feeds, UrlConfig.news);
       this.aggregator.youtube(this.videos, UrlConfig.youtube);
-      console.log(this.videos);
+      this.aggregator.facebook(this.posts, UrlConfig.facebook);
     },
 
     feedlist: function() {
       this.structureView.setActiveTabBarElement("nav1");
-      console.log(this.feeds);
       // create the view
       var page = new FeedListView({
         model: this.feeds
@@ -59,6 +62,13 @@ define(function(require) {
       this.structureView.setActiveTabBarElement("nav2");
       var page = new VideoListView({
         model: this.videos
+      });
+      this.changePage(page);
+    },
+      posts: function() {
+      this.structureView.setActiveTabBarElement("nav3");
+      var page = new FbPostListView({
+        model: this.posts
       });
       this.changePage(page);
     },
