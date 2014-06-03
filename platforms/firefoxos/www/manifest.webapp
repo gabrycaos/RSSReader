@@ -1,0 +1,12 @@
+{
+  "launch_path": "/index.html",
+  "installs_allowed_from": [
+    "*"
+  ],
+  "version": "0.0.1",
+  "name": "RSSReader",
+  "pkgName": "com.gabrycaos.RSSReader",
+  "icons": {
+    "128": "/img/logo.png"
+  }
+}
