@@ -12,6 +12,9 @@ define(function(require) {
             $.ajax({
                 url: link,
                 dataType: 'xml',
+                xhrFields: {
+                    mozSystem: true
+                },
                 success: function(res, code) {
                     entries = [];
                     var xml = $(res);
@@ -38,6 +41,9 @@ define(function(require) {
             $.ajax({
                 url: link,
                 dataType: 'xml',
+                xhrFields: {
+                    mozSystem: true
+                },
                 success: function(res, code) {
                     entries = [];
                     var xml = $(res);
@@ -64,6 +70,9 @@ define(function(require) {
             $.ajax({
                 url: link,
                 dataType: 'xml',
+                xhrFields: {
+                    mozSystem: true
+                },
                 success: function(res, code) {
                     entries = [];
                     var xml = $(res);
