@@ -12,4 +12,4 @@ With this boilerplate you have to work only on the graphics. The html files is i
 
 **SUPPORTED PLATFORMS**
 =======================
-Supported System: Work with all the system supported by Apache Cordova, tested with Android; platform folder are in /platform folder, don't works in Firefox OS.
+Supported System: Work with all the system supported by Apache Cordova, tested with Android; platform folder are in /platform folder, don't work in Firefox OS.

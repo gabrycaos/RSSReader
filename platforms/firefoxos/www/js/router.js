@@ -5,11 +5,11 @@ define(function(require) {
   var Backbone = require("backbone");
   var FeedModel = require("models/FeedModel");
   var VideoModel = require("models/VideoModel");
+  var StructureView = require("views/StructureView");
   var Aggregator = require("models/Aggregator");
   var FeedCollection = require("collections/FeedCollection");
   var VideoCollection = require("collections/VideoCollection");
   var FbPostCollection = require("collections/FbPostCollection");
-  var StructureView = require("views/StructureView");
   var FeedListView = require("views/pages/FeedListView");
   var FeedView = require("views/pages/FeedView");
   var VideoListView = require("views/pages/VideoListView");

@@ -1,12 +1,17 @@
 {
 
   "launch_path": "/index.html",
-  "type": "privileged",
+    "permissions": {
+    "systemXHR": {
+      "description": "Allows loading remote content"
+    }
+  },
   "installs_allowed_from": [
     "*"
   ],
   "version": "0.0.1",
   "name": "RSSReader",
+  "description": "RSS Reader boilerplate",
   "pkgName": "com.gabrycaos.RSSReader",
   "icons": {
     "128": "/img/logo.png"

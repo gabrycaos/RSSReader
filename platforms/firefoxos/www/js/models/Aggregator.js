@@ -9,6 +9,7 @@ define(function(require) {
     var Aggregator = Backbone.Model.extend({
         constructorName: "Aggregator",
         fetch: function(feeds, link) {
+            $.ajaxSetup
             $.ajax({
                 url: link,
                 dataType: 'xml',
@@ -33,7 +34,7 @@ define(function(require) {
                     feeds.reset(entries);
                 },
                 error: function(jqXHR, status, error) {
-                    alert("ERROR ON FETCHING NEWS!");
+                    alert("ERROR ON FETCHING NEWS!"+jqXHR.responseText);
                 }
             });
         },
@@ -62,7 +63,7 @@ define(function(require) {
                     videos.reset(entries);
                 },
                 error: function(jqXHR, status, error) {
-                    alert("ERROR ON FETCHING VIDEOS!")
+                    alert("ERROR ON FETCHING VIDEOS!"+jqXHR.responseText)
                 }
             });
         },
@@ -70,9 +71,6 @@ define(function(require) {
             $.ajax({
                 url: link,
                 dataType: 'xml',
-                xhrFields: {
-                    mozSystem: true
-                },
                 success: function(res, code) {
                     entries = [];
                     var xml = $(res);
@@ -88,7 +86,7 @@ define(function(require) {
                     posts.reset(entries);
                 },
                 error: function(jqXHR, status, error) {
-                    alert("ERROR ON FETCHING NEWS!");
+                    alert("ERROR ON FETCHING NEWS!"+jqXHR.responseText);
                 }
             });
         },
